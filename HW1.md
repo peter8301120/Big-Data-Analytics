@@ -1,0 +1,60 @@
+### (1) 哪些屬性對於惡意程式分類有效？  
+ A: dword
+char
+stdcall
+WinMain
+cookie
+FARPROC
+HMODULE
+entry
+__imp_
+misc_visualc
+ent_q_diffs_max
+ent_q_diff_diffs_12
+ent_p_12
+ent_p_13
+ent_p_15
+ent_p_19
+ent_p_diffs_5
+ent_p_diffs_7
+ent_p_diffs_8
+ent_p_diffs_19
+section_names_.rsrc
+section_names_header
+Unknown_Sections_por
+Unknown_Sections_lines_por
+.text_por
+.rsrc_por
+.reloc_por
+GetProcAddress
+VirtualProtect
+_initterm
+GetForegroundWindow
+exit
+memcpy
+__getmainargs
+_onexit
+regs_bl
+asm_commands_jnb
+asm_commands_mul
+asm_commands_test
+Offset.1
+dc_por
+dbN0_por
+dd_text
+db_text
+db3_rdata
+db3_all
+dd5
+db3_NdNt
+db3_all_zero
+Img107   
+### (2) 哪些屬性對於惡意程式分類無效？  
+ A: 除第一題提到的feature以外，其他幾乎都無效(權重 < 0.0001)   
+### (3) 用什麼方法可以幫助你決定上述的結論？  
+ A: 使用Random Forest 訓練完之後的 feature importance  
+### (4) 透過Python哪些套件以及方法可以幫助你完成上面的工作？  
+ A: 套件: sklearn 的 ensemble 中 RandomForestRegressor
+    方法: RandomForestRegressor(), fit()  
+### (5) 課程迄今有無建議？  
+ A: 希望老師可以盡量早一點到
